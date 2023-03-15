@@ -80,7 +80,7 @@ void initialize(int vertex)
 
 
 
-void build_relation(struct node pos1[])
+/*void build_relation(struct node pos1[])
 {
     relation_matrix[0][1]=1;
     relation_matrix[1][0]=1;
@@ -135,11 +135,11 @@ void build_relation(struct node pos1[])
 
 
 
-}
+}*/
 
 
 
-void build_relation_matrix(int edge,struct node pos2[])
+void build_relation_matrix(int edge,struct node pos1[])
 {
     int i,cost;
     for(i=0; i<edge; i++)
@@ -239,10 +239,10 @@ void for_self_experiment()
 
     build_relation_matrix(edge,pos1);
 
-     cleardevice();graphdefaults();
+     //cleardevice();graphdefaults();
 
 
-   x=0;y=0;
+   /*x=0;y=0;
     for(int inna=0;inna<vertex;inna++)
     {
         char str[20];
@@ -271,7 +271,7 @@ void for_self_experiment()
         pos1[inna].parda=x;
         pos1[inna].qanna=y;
 
-}
+}*/
 
    // build_relation(pos1);
 
@@ -419,7 +419,7 @@ int recx2=50;int recy2=350;int recx3=50;int recy3=400;int recx1=50;int recy1=300
         {
             if(relation_matrix[pi][ji]>0&&relation_matrix[pi][ji]<10000)
             {
-                line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
+
 
                 char coststring[20];
                 tostring(coststring,relation_matrix[pi][ji]);
@@ -428,6 +428,8 @@ int recx2=50;int recy2=350;int recx3=50;int recy3=400;int recx1=50;int recy1=300
                  outtextxy((pos1[pi].parda+pos1[ji].parda)/2,((pos1[pi].qanna+pos1[ji].qanna)/2)-20,coststring);
 
                setcolor(WHITE);
+
+               line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
 
 
             }
@@ -613,7 +615,6 @@ for(int pi=0;pi<vertex;pi++)
         {
             if(relation_matrix[pi][ji]>0&&relation_matrix[pi][ji]<10000)
             {
-                line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
 
                 char coststring[20];
                 tostring(coststring,relation_matrix[pi][ji]);
@@ -622,6 +623,10 @@ for(int pi=0;pi<vertex;pi++)
                  outtextxy((pos1[pi].parda+pos1[ji].parda)/2,((pos1[pi].qanna+pos1[ji].qanna)/2)-20,coststring);
 
                setcolor(WHITE);
+
+               if((pi==parent_idx[ji])||(ji==parent_idx[pi])){setcolor(GREEN);line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);setcolor(WHITE);}
+               else line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
+              // line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
 
 
             }
@@ -777,7 +782,7 @@ for(int pi=0;pi<vertex;pi++)
         {
             if(relation_matrix[pi][ji]>0&&relation_matrix[pi][ji]<10000)
             {
-                line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
+
 
                 char coststring[20];
                 tostring(coststring,relation_matrix[pi][ji]);
@@ -786,7 +791,9 @@ for(int pi=0;pi<vertex;pi++)
                  outtextxy((pos1[pi].parda+pos1[ji].parda)/2,((pos1[pi].qanna+pos1[ji].qanna)/2)-20,coststring);
 
                setcolor(WHITE);
-
+               //line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
+               if((pi==parent_idx[ji])||(ji==parent_idx[pi])){setcolor(GREEN);line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);setcolor(WHITE);}
+               else line(pos1[pi].parda,pos1[pi].qanna,pos1[ji].parda,pos1[ji].qanna);
 
             }
 
