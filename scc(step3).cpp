@@ -64,6 +64,112 @@ void tostring(char str[],int num)
 
 
 
+void build_direction(int o,int p,struct node pos3[])
+{
+  if(o==0)
+  {
+      if(p==1||p==2||p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==4){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      else if(p==5||p==6||p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+  }
+
+   else if(o==1)
+  {
+      if(p==0){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"<");}
+      else if(p==2||p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==4){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"L");}
+      else if(p==5){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      else if(p==6||p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+  }
+
+  else if(o==2)
+  {
+      if(p==0||p==1){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"<");}
+      else if(p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==4||p==5){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"L");}
+      else if(p==6){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+  }
+
+
+  else if(o==3)
+  {
+      if(p==0||p==1||p==2){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"<");}
+      //else if(p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==4||p==5||p==6){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"L");}
+      else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+  }
+
+  else if(o==4)
+  {
+      if(p==0){outtextxy((pos3[o].parda+pos3[p].parda)/2-1,((pos3[o].qanna+pos3[p].qanna)/2),"^");}
+      else if(p==5||p==6||p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==1||p==2||p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2)-7,"7");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+
+  }
+
+  else if(o==5)
+  {
+      if(p==4){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"<");}
+      else if(p==1){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2),"^");}
+      else if(p==6||p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==2||p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2)-7,"7");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+      else if(p==0){outtextxy((pos3[o].parda+pos3[p].parda)/2-5,((pos3[o].qanna+pos3[p].qanna)/2)-6,"T");}
+
+
+  }
+
+  else if(o==6)
+  {
+      if(p==4||p==5){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"<");}
+      else if(p==2){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2),"^");}
+      else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      else if(p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2)-7,"7");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+      else if(p==0||p==1){outtextxy((pos3[o].parda+pos3[p].parda)/2-5,((pos3[o].qanna+pos3[p].qanna)/2)-6,"T");}
+
+
+  }
+
+  else if(o==7)
+  {
+      if(p==4||p==5||p==6){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,"<");}
+      else if(p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2),"^");}
+     // else if(p==6||p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2,((pos3[o].qanna+pos3[p].qanna)/2)-10,">");}
+      //else if(p==2||p==3){outtextxy((pos3[o].parda+pos3[p].parda)/2-2,((pos3[o].qanna+pos3[p].qanna)/2)-7,"7");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2-3,((pos3[o].qanna+pos3[p].qanna)/2),"V");}
+      //else if(p==7){outtextxy((pos3[o].parda+pos3[p].parda)/2+1,((pos3[o].qanna+pos3[p].qanna)/2)-2,"4");}
+      else if(p==0||p==1||p==2){outtextxy((pos3[o].parda+pos3[p].parda)/2-5,((pos3[o].qanna+pos3[p].qanna)/2)-6,"T");}
+
+
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void build_relation_matrix(int edge,struct node pos2[])
 {
@@ -81,6 +187,8 @@ void build_relation_matrix(int edge,struct node pos2[])
         relation_matrix[u][v]=1;
         trans_matrix[v][u]=1;
         //relation_matrix[v][u]=1;
+
+        build_direction(u,v,pos2);
 
         line(pos2[u].parda,pos2[u].qanna,pos2[v].parda,pos2[v].qanna);
     }
@@ -175,7 +283,7 @@ void dfs1(int node,struct node pos1[]){
     {
         for(int inna=0; inna<vertex; inna++)
         {
-            if(relation_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
+            if(relation_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
         }
     }
 
@@ -268,7 +376,7 @@ void dfs1(int node,struct node pos1[]){
 
     //build_relation(pos1);
 
-    for(int i=0; i<vertex; i++)
+    /*for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
         {
@@ -276,6 +384,16 @@ void dfs1(int node,struct node pos1[]){
         }
     }
 
+}*/
+
+
+for(int i=0; i<vertex; i++)
+    {
+        for(int inna=0; inna<vertex; inna++)
+        {
+            if(relation_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
+        }
+    }
 }
 
 
@@ -400,13 +518,24 @@ void dfs2(int node,struct node pos1[],int index){
 
     //build_relation(pos1);
 
-    for(int i=0; i<vertex; i++)
+   /* for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
         {
             if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
         }
+    }*/
+
+
+
+    for(int i=0; i<vertex; i++)
+    {
+        for(int inna=0; inna<vertex; inna++)
+        {
+            if(trans_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
+        }
     }
+
 
     /*int SccNode;int countans=0;
 
@@ -693,13 +822,23 @@ int main(void)
 
     //build_relation(pos1);
 
-    for(int i=0; i<vertex; i++)
+    /*for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
         {
             if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
         }
+    }*/
+
+
+    for(int i=0; i<vertex; i++)
+    {
+        for(int inna=0; inna<vertex; inna++)
+        {
+            if(trans_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
+        }
     }
+
 
 
 
@@ -838,13 +977,24 @@ int main(void)
 
    // build_relation(pos1);
 
-   for(int i=0; i<vertex; i++)
+   /*for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
         {
             if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
         }
+    }*/
+
+
+
+    for(int i=0; i<vertex; i++)
+    {
+        for(int inna=0; inna<vertex; inna++)
+        {
+            if(trans_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
+        }
     }
+
 
     //Sleep(3000);
     //ch=getch();
@@ -863,7 +1013,7 @@ int main(void)
                 int countans=0;
                 for(int parina=0;parina<=2;parina++)
                 {
-                    printf("enter the stack node for %d",order[i]+1);
+                    printf("enter the connected node to %d",order[i]+1);
                     scanf("%d",&stackNode);getchar();
                     stackNode=stackNode-1;
                     for(int ii=0;ii<scc_cnt;ii++){
@@ -1003,16 +1153,30 @@ int main(void)
 
     //build_relation(pos1);
 
-for(int i=0; i<vertex; i++)
+/*for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
         {
             if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
         }
-    }
+    }*/
     //Sleep(3000);
 
     //scanf("%c",&ch);
+
+    for(int i=0; i<vertex; i++)
+    {
+        for(int inna=0; inna<vertex; inna++)
+        {
+            if(trans_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
+        }
+    }
+
+
+
+
+
+
 
 graphdefaults();
 cleardevice();
@@ -1132,13 +1296,23 @@ cleardevice();
 
     //build_relation(pos1);
 
-       for(int i=0; i<vertex; i++)
+     /*  for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
         {
             if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
         }
+    }*/
+
+
+    for(int i=0; i<vertex; i++)
+    {
+        for(int inna=0; inna<vertex; inna++)
+        {
+            if(trans_matrix[i][inna]==1){build_direction(i,inna,pos1);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);}
+        }
     }
+
 
 
 
