@@ -42,158 +42,242 @@ int coding(int progress)
 
     if(progress==1)
     {
-       while(ans<5)
+        while(ans<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
+            printf("\n\n--------------BFS (Breadth First Search) Algorithm---------------\n\n");
+            Sleep(3000);
+            print_BFSalgorithm();
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------BFS (Breadth First Search) VISUALIZATION---------------\n\n");
+            Sleep(3000);
+
+            for_teaching_purpose_BFS();
+            getchar();
+
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------BFS (Breadth First Search) VISUALIZATION & PRACTICE---------------\n\n");
+            Sleep(3000);
+
+            for_self_experiment_BFS();
+            getchar();
+
+            scanf("%c",&ramadan);
+            printf("\n\n--------------GET READY TO ANSWER BFS (Breadth First Search) BASED PROBLEMS ---------------\n\n");
+
+            Sleep(3000);
+            game_part_BFS();
+
+        }
+        progress++;
+
+        cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+
+        cin>>choice;
+
+        if(choice==1)return progress;
+
+
+    }
+
+
+
+
+    if(progress==2)
     {
-      getchar();
-      scanf("%c",&ramadan);
-      print_BFSalgorithm();
-      getchar();
-      scanf("%c",&ramadan);
+        while(ans1<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
+            printf("\n\n--------------DFS (Depth First Search) Algorithm---------------\n\n");
+            Sleep(3000);
+            print_DFSalgorithm();
 
-    for_teaching_purpose_BFS();
+            getchar();
+            scanf("%c",&ramadan);
+            printf("\n\n--------------DFS (Depth First Search) VISUALIZATION---------------\n\n");
+            Sleep(3000);
+            for_teaching_purpose_DFS();
 
-    scanf("%c",&ramadan);
+            getchar();
+            scanf("%c",&ramadan);
+            printf("\n\n--------------DFS (Depth First Search) VISUALIZATION & PRACTICE---------------\n\n");
+            Sleep(3000);
+            for_self_experiment_DFS();
+            //printf("\n\n--------------GET READY TO ANSWER DFS (Depth First Search) BASED PROBLEM ---------------\n\n");
+            getchar();
+            scanf("%c",&ramadan);
+            printf("\n\n--------------GET READY TO ANSWER DFS (Depth First Search) BASED PROBLEMS ---------------\n\n");
+            Sleep(3000);
 
-    for_self_experiment_BFS();
+            game_part_DFS();
 
-    scanf("%c",&ramadan);
+        }
 
-     game_part_BFS();
+        progress++;
+
+        cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+
+        cin>>choice;
+
+        if(choice==1)return progress;
+
 
     }
-     progress++;
-
-     cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
-
-     cin>>choice;
-
-     if(choice==1)return progress;
-
-
-    }
-
-
-
-
-   if(progress==2)
-   {
-      while(ans1<5)
-     {
-       getchar();
-       scanf("%c",&ramadan);
-       print_DFSalgorithm();
-
-       getchar();
-       scanf("%c",&ramadan);
-
-     for_teaching_purpose_DFS();
-
-     scanf("%c",&ramadan);
-
-     for_self_experiment_DFS();
-
-     scanf("%c",&ramadan);
-
-      game_part_DFS();
-
-     }
-
-     progress++;
-
-     cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
-
-     cin>>choice;
-
-     if(choice==1)return progress;
-
-
-   }
 
 
 
     if(progress==3)
     {
-      while(ans2<5)
-    {
-      getchar();
-      scanf("%c",&ramadan);
+        while(ans2<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
 
-       print_topology();
+            printf("\n\n--------------Topological Sorting Algorithm ---------------\n\n");
+            Sleep(3000);
 
-     scanf("%c",&ramadan);
+            print_topology();
 
-    for_teaching_purpose_topo();
+            getchar();
 
-    scanf("%c",&ramadan);
+            scanf("%c",&ramadan);
+            printf("\n\n--------------Topological Sorting VISUALIZATION ---------------\n\n");
+            Sleep(3000);
 
-    for_self_experiment_topo();
+            for_teaching_purpose_topo();
 
-    scanf("%c",&ramadan);
+            getchar();
 
-     int res=game_part_topology();
-     if(res==5)break;
-     }
+            scanf("%c",&ramadan);
 
-    progress++;
+            printf("\n\n-------------Topological Sorting VISUALIZATION & PRACTICE---------------\n\n");
+            Sleep(3000);
 
-    cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+            for_self_experiment_topo();
 
-     cin>>choice;
+            getchar();
 
-     if(choice==1)return progress;
+            scanf("%c",&ramadan);
+
+            printf("\n\n-------------GET READY TO ANSWER Topological Sorting BASED PROBLEMS---------------\n\n");
+            Sleep(3000);
+
+
+            int res=game_part_topology();
+            if(res==5)break;
+        }
+
+        progress++;
+
+        cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+
+        cin>>choice;
+
+        if(choice==1)return progress;
 
     }
 
 
-   if(progress==4)
-   {
-       while(anss<5)
+    if(progress==4)
     {
-     print_scc();
+        while(anss<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
 
-    for_teaching_purpose_Scc();
+            printf("\n\n--------------Strongly Connected Components Algorithm ---------------\n\n");
+            Sleep(3000);
 
-    for_self_experiment_scc();
+            print_scc();
 
-    int res=game_part_scc();
-    if(res==5)break;
+            getchar();
+            scanf("%c",&ramadan);
 
-     }
+            printf("\n\n--------------Strongly Connected Components Algorithm VISUALIZATION---------------\n\n");
+            Sleep(3000);
 
-     progress++;
+            for_teaching_purpose_Scc();
 
-     cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+            getchar();
+            scanf("%c",&ramadan);
 
-     cin>>choice;
+            printf("\n\n--------------Strongly Connected Components Algorithm VISUALIZATION & PRACTICE---------------\n\n");
+            Sleep(3000);
 
-     if(choice==1)return progress;
+            for_self_experiment_scc();
+
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------GET READY TO ANSWER Strongly Connected Components Algorithm BASED PROBLEMS ---------------\n\n");
+            Sleep(3000);
+
+            int res=game_part_scc();
+            if(res==5)break;
+
+        }
+
+        progress++;
+
+        cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+
+        cin>>choice;
+
+        if(choice==1)return progress;
 
 
-   }
+    }
 
     if(progress==5)
     {
-       while(ansd<5)
-    {
-       print_Dijk();
+        while(ansd<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
 
-    for_teaching_purpose_dijkstra();
+            printf("\n\n--------------DIJKSTRA'S Algorithm ---------------\n\n");
+            Sleep(3000);
+            print_Dijk();
 
-    for_self_experiment_dijkstra();
+            getchar();
+            scanf("%c",&ramadan);
 
-     int res=game_part_dijkstra();
+            printf("\n\n--------------DIJKSTRA'S Algorithm VISUALIZATION ---------------\n\n");
+            Sleep(3000);
 
-     if(res==5)break;
+            for_teaching_purpose_dijkstra();
+            getchar();
+            scanf("%c",&ramadan);
 
-     }
+            printf("\n\n--------------DIJKSTRA'S Algorithm VISUALIZATION & PRACTICE---------------\n\n");
+            Sleep(3000);
 
-    progress++;
+            for_self_experiment_dijkstra();
 
-    cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+            getchar();
+            scanf("%c",&ramadan);
 
-     cin>>choice;
+            printf("\n\n--------------GET READY TO ANSWER DIJKSTRA'S Algorithm BASED PROBLEMS---------------\n\n");
+            Sleep(3000);
 
-     if(choice==1)return progress;
+            int res=game_part_dijkstra();
+
+            if(res==5)break;
+
+        }
+
+        progress++;
+
+        cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
+
+        cin>>choice;
+
+        if(choice==1)return progress;
 
 
 
@@ -201,58 +285,103 @@ int coding(int progress)
 
     if(progress==6)
     {
-       while(ansk<5)
-    {
+        while(ansk<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------KRUSKAL'S Algorithm ---------------\n\n");
+            Sleep(3000);
+
+            print_kruskal();
+
+            //scanf("%c",&ramadan);
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------KRUSKAL'S Algorithm VISUALIZATION ---------------\n\n");
+            Sleep(3000);
+
+            for_teaching_purpose_kru();
+
+            //scanf("%c",&ramadan);
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------DIJKSTRA'S Algorithm VISUALIZATION & PRACTICE ---------------\n\n");
+            Sleep(3000);
+
+            for_self_experiment_kru();
+
+            //scanf("%c",&ramadan);
+
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------GET READY TO ANSWER DIJKSTRA'S Algorithm BASED PROBLEMS---------------\n\n");
+            Sleep(3000);
+
+            int res=game_part_kru();
+
+            if(res==5)break;
 
 
-    print_kruskal();
 
-    scanf("%c",&ramadan);
+        }
 
-    for_teaching_purpose_kru();
+        progress++;
 
-    scanf("%c",&ramadan);
+        cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
 
-    for_self_experiment_kru();
+        cin>>choice;
 
-    scanf("%c",&ramadan);
-
-    int res=game_part_kru();
-
-    if(res==5)break;
-
-
-
-    }
-
-    progress++;
-
-    cout<<"1:Exit"<<"\n"<<"2:continue"<<"\n";
-
-     cin>>choice;
-
-     if(choice==1)return progress;
+        if(choice==1)return progress;
 
     }
 
 
     if(progress==7)
     {
-       while(ansp<5)
-    {
-        print_prim();
-        scanf("%c",&ramadan);
-        for_teaching_purpose_prim();
-        scanf("%c",&ramadan);
-        for_self_experiment_prim();
-        scanf("%c",&ramadan);
-        int res=game_part_prim();
+        while(ansp<5)
+        {
+            getchar();
+            scanf("%c",&ramadan);
 
-        if(res==5)break;
+            printf("\n\n--------------PRIM'S Algorithm ---------------\n\n");
+            Sleep(3000);
 
-    }
+            print_prim();
 
-    return progress;
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------PRIM'S Algorithm VISUALIZATION ---------------\n\n");
+            Sleep(3000);
+
+            //scanf("%c",&ramadan);
+            for_teaching_purpose_prim();
+
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------PRIMS'S Algorithm VISUALIZATION & PRACTICE---------------\n\n");
+            Sleep(3000);
+
+            //scanf("%c",&ramadan);
+            for_self_experiment_prim();
+            getchar();
+            scanf("%c",&ramadan);
+
+            printf("\n\n--------------GET READY TO ANSWER PRIM'S Algorithm BASED PROBLEMS---------------\n\n");
+            Sleep(3000);
+            //scanf("%c",&ramadan);
+            int res=game_part_prim();
+
+            if(res==5)break;
+
+        }
+
+        return progress;
 
 
     }

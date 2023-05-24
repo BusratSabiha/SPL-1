@@ -105,7 +105,8 @@ void dfs1_scc(int node,struct node pos1[]){
 
 
 
-    scanf("%c",&ch);
+    //scanf("%c",&ch);
+    ch=getch();
     cleardevice();
     graphdefaults();
 
@@ -169,17 +170,7 @@ void dfs1_scc(int node,struct node pos1[]){
 
 
 
-    //build_relation(pos1);
 
-    /*for(int i=0; i<vertex; i++)
-    {
-        for(int inna=0; inna<vertex; inna++)
-        {
-            if(relation_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-        }
-    }
-
-}*/
 
 
 for(int i=0; i<vertex; i++)
@@ -199,7 +190,8 @@ void dfs2_scc(int node,struct node pos1[],int index){
 
     color[node]='g';
     //sleep(3000);
-    scanf("%c",&ch);
+    //scanf("%c",&ch);
+    ch=getch();
     cleardevice();
     graphdefaults();
     char nodename[20];
@@ -312,15 +304,6 @@ void dfs2_scc(int node,struct node pos1[],int index){
 
 
 
-    //build_relation(pos1);
-
-   /* for(int i=0; i<vertex; i++)
-    {
-        for(int inna=0; inna<vertex; inna++)
-        {
-            if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-        }
-    }*/
 
 
 
@@ -333,25 +316,7 @@ void dfs2_scc(int node,struct node pos1[],int index){
     }
 
 
-    /*int SccNode;int countans=0;
 
-            for(int parina=0;parina<3;parina++)
-            {
-               printf("enter the strongly connected node to the node ->%d\n",order[index]+1);
-            scanf("%d",&SccNode);
-            SccNode=SccNode-1;
-            if(trans_matrix[node][SccNode]==1&&color[SccNode]=='w')
-            {
-                dfs2(SccNode,pos1,index);countans=0;
-            }
-
-            else{
-                countans++;
-                printf("wrong!!");
-                if(parina<2)printf("please try again");
-            }
-            if(countans==0)break;
-            }*/
 
 
 
@@ -370,131 +335,7 @@ void dfs2_scc(int node,struct node pos1[],int index){
     //color[node]='b';
     scc[scc_cnt]=node;//ordering according to finishing time
     scc_cnt++;
-    //printf("the node is %d\n",node);
 
-
-    /*scanf("%c",&ch);
-    cleardevice();
-    graphdefaults();
-
-
-
-     recxo=50; recyo=220;
-
-        for(int i=0;i<order_cnt;i++)
-        {
-            char str[20];
-            tostring(str,order[i]+1);
-
-        if(order[i]==order[index])
-        {
-           int rxo=recxo+50;
-                        int ryo=recyo+50;
-                        setcolor(RED);
-                        rectangle(recxo,recyo,rxo,ryo);
-
-                         outtextxy((recxo+rxo)/2,(recyo+ryo)/2,str);
-                        //getch();
-                        setcolor(WHITE);
-                        recxo=rxo;
-        }
-
-        else{
-
-             int rxo=recxo+50;
-                        int ryo=recyo+50;
-                        //setcolor(RED);
-                        rectangle(recxo,recyo,rxo,ryo);
-
-                         outtextxy((recxo+rxo)/2,(recyo+ryo)/2,str);
-                        //getch();
-                        //setcolor(WHITE);
-                        recxo=rxo;
-
-        }
-
-
-        }
-
-
-
-
-
-
-
-
-    outtextxy(50,280,"Following nodes are strongly connected to node -");
-    outtextxy(370,280,nodename);
-
-      recx=50;recy=300;
-
-        for(int i=0;i<scc_cnt;i++)
-        {
-            char str[20];
-            tostring(str,scc[i]+1);
-
-        if(color[scc[i]]=='b')
-        {
-           int rx=recx+50;
-                        int ry=recy+50;
-                        rectangle(recx,recy,rx,ry);
-                        setcolor(RED);
-                         outtextxy((recx+rx)/2,(recy+ry)/2,str);
-                        //getch();
-                        setcolor(WHITE);
-                        recx=rx;
-        }
-
-
-        }
-
-
-
-
-
-
-
-
-        for(int inna=0; inna<vertex; inna++)
-        {
-            char str[20];
-            tostring(str,inna+1);
-
-            outtextxy(pos1[inna].parda-30,pos1[inna].qanna-15,str);
-
-            if(color[inna]=='b')
-            {
-                changeColor(pos1[inna].parda,pos1[inna].qanna,RED);
-
-            }
-
-
-
-
-            else if(color[inna]=='g')
-            {
-                changeColor(pos1[inna].parda,pos1[inna].qanna,GREEN);
-
-            }
-
-
-
-            else changeColor(pos1[inna].parda,pos1[inna].qanna,WHITE);
-
-
-        }
-
-
-
-    //build_relation(pos1);
-
-    for(int i=0; i<vertex; i++)
-    {
-        for(int inna=0; inna<vertex; inna++)
-        {
-            if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-        }
-    }*/
 
 }
 
@@ -580,9 +421,11 @@ void for_self_experiment_scc(void)
       }
 
 
- scanf("%c",&ch);//problem hote pare
+ //scanf("%c",&ch);//problem hote pare
 
-        initialize(vertex);//////////////////////////////////////////////////////////////////////////////////
+ ch=getch();
+
+        initialize(vertex);
 
         graphdefaults();
         cleardevice();
@@ -618,15 +461,7 @@ void for_self_experiment_scc(void)
 
 
 
-    //build_relation(pos1);
 
-    /*for(int i=0; i<vertex; i++)
-    {
-        for(int inna=0; inna<vertex; inna++)
-        {
-            if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-        }
-    }*/
 
 
     for(int i=0; i<vertex; i++)
@@ -949,18 +784,7 @@ void for_self_experiment_scc(void)
 
 
 
-    //build_relation(pos1);
 
-/*for(int i=0; i<vertex; i++)
-    {
-        for(int inna=0; inna<vertex; inna++)
-        {
-            if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-        }
-    }*/
-    //Sleep(3000);
-
-    //scanf("%c",&ch);
 
     for(int i=0; i<vertex; i++)
     {
@@ -1093,15 +917,7 @@ cleardevice();
 
 
 
-    //build_relation(pos1);
 
-     /*  for(int i=0; i<vertex; i++)
-    {
-        for(int inna=0; inna<vertex; inna++)
-        {
-            if(trans_matrix[i][inna]==1)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-        }
-    }*/
 
 
     for(int i=0; i<vertex; i++)

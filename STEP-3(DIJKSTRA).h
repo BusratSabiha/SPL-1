@@ -55,41 +55,7 @@ void for_self_experiment_dijkstra(void)
 
     build_relation_matrix_dijkstra(edge,pos1);
 
-     //cleardevice();graphdefaults();
 
-
-   /*x=0;y=0;
-    for(int inna=0;inna<vertex;inna++)
-    {
-        char str[20];
-        tostring(str,inna+1);
-
-
-        if(inna<vertex/2)
-        {
-          x=x+100;
-
-          y=50;
-        }
-
-
-        else
-        {
-           x=pos1[inna-4].parda;
-           y=(pos1[inna-4].qanna)+120;
-        }
-
-        outtextxy(x-25,y-15,str);
-
-
-        changeColor(x,y,WHITE);
-
-        pos1[inna].parda=x;
-        pos1[inna].qanna=y;
-
-}*/
-
-   // build_relation(pos1);
 
     for(int pi=0;pi<vertex;pi++)
     {
@@ -184,7 +150,8 @@ int recx2=50;int recy2=350;int recx3=50;int recy3=400;int recx1=50;int recy1=300
         //Sleep(2000);
        // ch=getch();
 
-       scanf("%c",&ch);
+       //scanf("%c",&ch);
+       ch=getch();
 
         graphdefaults();
         cleardevice();
@@ -202,15 +169,7 @@ int recx2=50;int recy2=350;int recx3=50;int recy3=400;int recx1=50;int recy1=300
 
         if(inna==sourcenode){
             changeColor(pos1[inna].parda,pos1[inna].qanna,GREEN);
-            /*int rx=recx+50;
-                        int ry=recy+50;
-                        rectangle(recx,recy,rx,ry);
-                        //setcolor(RED);
-                         outtextxy((recx+rx)/2,(recy+ry)/2,str);
-                        //getch();
-                        //setcolor(WHITE);
-                        recx=rx;
-                        outtextxy(20,250,"Q :");*/
+
         }
 
         else changeColor(pos1[inna].parda,pos1[inna].qanna,WHITE);
@@ -218,14 +177,7 @@ int recx2=50;int recy2=350;int recx3=50;int recy3=400;int recx1=50;int recy1=300
 
     }
 
-   /* build_relation(pos1);
-    for(i=0;i<vertex;i++)
-    {
-       for(int inna=0;inna<vertex;inna++)
-       {
-           if(relation_matrix[i][inna]>0&&relation_matrix[i][inna]<10000)line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-       }
-    }*/
+
 
 
 
@@ -407,20 +359,7 @@ int recx2=50;int recy2=350;int recx3=50;int recy3=400;int recx1=50;int recy1=300
 
     }
 
-    /*build_relation(pos1);
 
-
-    for(i=0;i<vertex;i++)
-    {
-       for(int inna=0;inna<vertex;inna++)
-       {
-           if(relation_matrix[i][inna]>0&&relation_matrix[i][inna]<10000){
-               if((i==parent_idx[inna])||(inna==parent_idx[i])){setcolor(GREEN);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);setcolor(WHITE);}
-               else line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-           }
-       }
-    }
-*/
 
 
 
@@ -544,7 +483,8 @@ for(int pi=0;pi<vertex;pi++)
              //ch=getch();
 
              //ch=getch();
-             scanf("%c",&ch);
+             //scanf("%c",&ch);
+             ch=getch();
             cleardevice();
             graphdefaults();
 
@@ -576,19 +516,6 @@ for(int pi=0;pi<vertex;pi++)
 
     }
 
-   /* build_relation(pos1);
-
-
-    for(i=0;i<vertex;i++)
-    {
-       for(int inna=0;inna<vertex;inna++)
-       {
-           if(relation_matrix[i][inna]>0&&relation_matrix[i][inna]<10000){
-               if((i==parent_idx[inna])||(inna==parent_idx[i])){setcolor(GREEN);line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);setcolor(WHITE);}
-               else line(pos1[i].parda,pos1[i].qanna,pos1[inna].parda,pos1[inna].qanna);
-           }
-       }
-    }*/
 
 
 
@@ -684,7 +611,7 @@ for(int pi=0;pi<vertex;pi++)
         ch=getch();
 
 
-        printf("\n\n\n");
+        /*printf("\n\n\n");
 
         for(i=0; i<vertex; i++)
 
@@ -695,7 +622,7 @@ for(int pi=0;pi<vertex;pi++)
             printf("color is %c\t",color[i]);
             printf("\n\n\n");
 
-        }
+        }*/
 
 
 

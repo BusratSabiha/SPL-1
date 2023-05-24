@@ -1,6 +1,3 @@
-#ifndef STEP-3(PRIM)_H_INCLUDED
-#define STEP-3(PRIM)_H_INCLUDED
-#endif // STEP-3(PRIM)_H_INCLUDED
 
 void build_relation_matrix_prim(int edge,struct node pos1[])
 {
@@ -121,7 +118,10 @@ void for_self_experiment_prim(void)
 
 
    color[sourcenode]='g';
-   scanf("%c",&ch);
+  // scanf("%c",&ch);
+
+  ch=getch();
+
     cleardevice();
         graphdefaults();
 
@@ -240,7 +240,7 @@ void for_self_experiment_prim(void)
                {
                    //union1(choice1,choice2);
 
-                   printf("Edge %d:(%d, %d) cost:%d \n",edge_count++, a, b, min);
+                   //printf("Edge %d:(%d, %d) cost:%d \n",edge_count++, a, b, min);
                    color[choice2]='g';
                    //color[choice2]='g';
                    c_edge[cnt].parda=choice1;
@@ -282,7 +282,7 @@ void for_self_experiment_prim(void)
         }
 
         // union1(a, b);
-        printf("Edge %d:(%d, %d) cost:%d \n",edge_count++, a, b, min);
+        //printf("Edge %d:(%d, %d) cost:%d \n",edge_count++, a, b, min);
        // color[a]='g';
         color[b]='g';
         c_edge[cnt].parda=a;
@@ -303,7 +303,9 @@ void for_self_experiment_prim(void)
 
 
 
-       scanf("%c",&ch);
+       //scanf("%c",&ch);
+
+       ch=getch();
 
         cleardevice();
         graphdefaults();
@@ -404,11 +406,16 @@ void for_self_experiment_prim(void)
         tostring(min_string,min);
 
         outtextxy(50,350,"minimum_cost = minimum_cost + ");
-        outtextxy(290,350,min_string);
+        if(min<10000)outtextxy(290,350,min_string);
+
+        else outtextxy(290,350,"INFINITY");
+
+
         tostring(min_string,mincost);
 
         outtextxy(50,380,"minimum_cost = ");
-        outtextxy(170,380,min_string);
+        if(mincost<10000)outtextxy(170,380,min_string);
+        else outtextxy(170,380,"INFINITY");
 
 
 
@@ -420,7 +427,7 @@ void for_self_experiment_prim(void)
 
 
     }
-    printf("\n Minimum cost= %d \n", mincost);
+   // printf("\n Minimum cost= %d \n", mincost);
 
     // recx=50;recy=220;
 
