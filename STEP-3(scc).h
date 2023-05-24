@@ -1,15 +1,14 @@
-#ifndef STEP-3(SCC)_H_INCLUDED
-#define STEP-3(SCC)_H_INCLUDED
-#endif // STEP-3(SCC)_H_INCLUDED
 
 
 
+//order_cnt=0;
 
 void dfs1_scc(int node,struct node pos1[]){
 
     color[node]='g';
     //sleep(3000);
-    scanf("%c",&ch);
+    //scanf("%c",&ch);
+    ch=getch();
     cleardevice();
     graphdefaults();
     int recx=50;int recy=220;
@@ -250,7 +249,7 @@ void dfs2_scc(int node,struct node pos1[],int index){
 
 
 
-
+        //scc_cnt=0;
 
     int recx=50;int recy=300;
 
@@ -513,6 +512,15 @@ void for_self_experiment_scc(void)
 
      initialize(vertex);
 
+     for(int i=0;i<vertex;i++)
+     {
+         for(int j=0;j<vertex;j++)
+         {
+             trans_matrix[i][j]=0;
+         }
+     }
+
+
     struct node pos1[vertex];
 
 
@@ -574,7 +582,7 @@ void for_self_experiment_scc(void)
 
  scanf("%c",&ch);//problem hote pare
 
-        initialize(vertex);
+        initialize(vertex);//////////////////////////////////////////////////////////////////////////////////
 
         graphdefaults();
         cleardevice();
@@ -776,7 +784,7 @@ void for_self_experiment_scc(void)
     }*/
 
 
-
+/*----------------------------------------------------------------------------------------------------------*/
     for(int i=0; i<vertex; i++)
     {
         for(int inna=0; inna<vertex; inna++)
@@ -976,6 +984,7 @@ cleardevice();
         }
 
         //scanf("%c",&ch);
+        //ch=getch();
        // graphdefaults();
         //cleardevice();
 
